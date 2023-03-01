@@ -1,38 +1,102 @@
-.App {
+.kukareku{
+  position: relative;
+  left:400px;
+  height: 400px;
+  width: 200px;
+}
+.kukareku path{
+  transition: 2s;
+}
+.kukareku path:hover{
+  transition: 0.5s;
+  stroke: palegreen;
+  /*fill: darkgreen;*/
+}
+
+.app {
+  height: 100vh;
+  background: deeppink;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  /*// background: #eee;*/
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  height: 360px;
+  box-sizing: border-box;
+  border: 4px dotted blue;
+}
+
+.swiper .swiper-slide {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-size: 18px;
+ 
+  /*background: deeppink;*/
+  
+  /* Center slide text vertically */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.swiper-wrapper > .swiper-slide-active{
+  /*border: 2px dotted yellow;*/
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.swiper-slide-next {
+  display: flex;
+  
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  max-width: 637px;
+  height: 100%;
+  object-fit: cover;
+}
+.mySwiper .swiper-pagination-bullet{
+  background-color: #F4D059;
+  opacity: 0.4;
+  /*width: 35px;*/
+  /*height: 35px;*/
+}
+.mySwiper .swiper-pagination-bullet-active{
+  opacity: 1;
+}
+/*.mySwiper .swiper-button-prev{*/
+/*  height: ;*/
+/*}*/
+.mySwiper .swiper-button-prev:after {
+  stroke: #F4D059;
+  content: url("./images/Arrow.svg");
+}
+.arrow-next {
+  height: 200px;
+  width: 200px;
+  background: black;
+  color: red;
+  display: block !important;
+  
+}
+.arrow-prev {
+  height: 200px;
+  width: 200px;
+  background: #F4D059;
+  color: red;
+  display: block !important;
 }
